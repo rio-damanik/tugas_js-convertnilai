@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APP CONVERT NILAI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>APP CONVERT NILAI</h1>
+    <h3>Membuat Convert Nilai sebagai berikut</h3>
+
+    <h5>
+      Silahkan Click untuk Mencoba lagi
+      <button onclick="convert_nilai()">Convert Grade</button>
+    </h5>
+    <h5>Nilai 90-100 = A</h5>
+    <h5>Nilai 60-89 = B</h5>
+    <h5>Nilai 40-59 = C</h5>
+    <h5>Nilai 20-39 = D</h5>
+    <h5>Nilai 10-19 = E</h5>
+
+    <script>
+      function convert_nilai() {
+        let nilai = prompt("Input Nilai kamu: ");
+        nilai = parseFloat(nilai);
+
+        if (nilai >= 90 && nilai <= 100) {
+          alert(`Nilai kamu adalah A`);
+        } else if (nilai >= 60 && nilai <= 89) {
+          alert(`Nilai kamu adalah B`);
+        } else if (nilai >= 40 && nilai <= 59) {
+          alert(`Nilai kamu adalah C`);
+        } else if (nilai >= 20 && nilai <= 39) {
+          alert(`Nilai kamu adalah D`);
+        } else if (nilai >= 10 && nilai <= 19) {
+          alert(`Nilai kamu adalah E`);
+        } else {
+          alert(`Input Nilai kamu salah, coba lagi`);
+        }
+      }
+
+      convert_nilai();
+    </script>
+  </body>
+</html>
